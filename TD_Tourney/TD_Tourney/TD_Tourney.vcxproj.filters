@@ -48,10 +48,10 @@
     <ClInclude Include="qlearning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_new.h">
+    <ClInclude Include="simple_trend_new.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_tweak.h">
+    <ClInclude Include="simple_trend_tweak.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -92,10 +92,10 @@
     <ClCompile Include="qlearning.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_new.cpp">
+    <ClCompile Include="simple_trend_tweak.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_tweak.cpp">
+    <ClCompile Include="simple_trend_new.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

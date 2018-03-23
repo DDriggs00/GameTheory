@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -11,13 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_new.h" />
-    <ClInclude Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_tweak.h" />
     <ClInclude Include="always.h" />
     <ClInclude Include="mixed.h" />
     <ClInclude Include="qlearning.h" />
     <ClInclude Include="random.h" />
     <ClInclude Include="simple_trend.h" />
+    <ClInclude Include="simple_trend_new.h" />
+    <ClInclude Include="simple_trend_tweak.h" />
     <ClInclude Include="TFT_predict.h" />
     <ClInclude Include="TFT_simple.h" />
     <ClInclude Include="tournament.h" />
@@ -26,14 +26,14 @@
     <ClInclude Include="Zeuthen.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_new.cpp" />
-    <ClCompile Include="..\..\..\Iterated Traveler%27s Dilemma\TD_Tourney\TD_Tourney\simple_trend_tweak.cpp" />
     <ClCompile Include="always.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mixed.cpp" />
     <ClCompile Include="qlearning.cpp" />
     <ClCompile Include="random.cpp" />
     <ClCompile Include="simple_trend.cpp" />
+    <ClCompile Include="simple_trend_new.cpp" />
+    <ClCompile Include="simple_trend_tweak.cpp" />
     <ClCompile Include="TFT_predict.cpp" />
     <ClCompile Include="TFT_simple.cpp" />
     <ClCompile Include="tournament.cpp" />
@@ -44,18 +44,21 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A4F2CFB7-F44C-45C9-B26B-7FE8EB70947F}</ProjectGuid>
     <RootNamespace>TD_Tourney</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

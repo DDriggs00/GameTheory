@@ -2,6 +2,9 @@
 #include <conio.h>  // For _gethch
 #include <time.h>	// For timing analysis
 
+#include <string>
+#include <cstdlib>
+
 #include <fstream> // For file logging
 #include <direct.h> // to create folders
 #include <math.h>
@@ -12,13 +15,13 @@
 
 using namespace std;
 
-const int MIN_BID = 2;
-const int MAX_BID = 100;
-const int GRANULARITY = 1;
-const int BONUS_MALUS = 2;
+const int MAX_BID = 100;		//default 100
+const int GRANULARITY = 1;		//default 1
+const int BONUS_MALUS = 2;		//default 2
+const int MIN_BID = BONUS_MALUS;//default 2
 
-const int MATCHES = 100;
-const int ROUNDS = 1000;
+const int MATCHES = 10;		//default 100
+const int ROUNDS = 100;		//default 1000
 
 ofstream error;
 ofstream longnames;

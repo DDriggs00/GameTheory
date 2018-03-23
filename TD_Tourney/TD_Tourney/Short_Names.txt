@@ -1,24 +1,4 @@
-Gnrc Trvlr
-Gnrc Trvlr
-TFT (y-1)
 L(y-g) E(x-g) H(x-g)
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
@@ -28,11 +8,26 @@ Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
-100
-R[99, 100]
+TFT (y-1)
 Gnrc Trvlr
-99
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
 R[96, 100]
+99
+Gnrc Trvlr
+Gnrc Trvlr
+R[99, 100]
+100
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
@@ -40,3 +35,8 @@ Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
 R[2, 100]
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr
+Gnrc Trvlr

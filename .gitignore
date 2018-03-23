@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+TD_Tourney/TD_Tourney/logs/
+TD_Tourney/TD_Tourney/Debug/

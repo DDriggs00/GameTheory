@@ -243,19 +243,19 @@ void tournament::addCompetitors()
 	
 	competitors.push_back(new random);
 	competitors.push_back(new random(MAX_BID - GRANULARITY, MAX_BID));
-	competitors.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // Risk minimization range
+	competitors.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // regret minimization range
 	twins.push_back(new random);
 	twins.push_back(new random(MAX_BID - GRANULARITY, MAX_BID));
-	twins.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // Risk minimization range
+	twins.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // regret minimization range
 	
 	competitors.push_back(new always(MIN_BID));
 	competitors.push_back(new always(MAX_BID - GRANULARITY));
 	competitors.push_back(new always(MAX_BID));
-	competitors.push_back(new always(MAX_BID - 2*BONUS_MALUS + 1));  // Risk minimization as per Halpern
+	competitors.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Regret minimization as per Halpern
 	twins.push_back(new always(MIN_BID));
 	twins.push_back(new always(MAX_BID - GRANULARITY));
 	twins.push_back(new always(MAX_BID));
-	twins.push_back(new always(MAX_BID - 2*BONUS_MALUS + 1));  // Risk minimization as per Halpern
+	twins.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Regret minimization as per Halpern
 
 	competitors.push_back(new TFT_simple);
 	twins.push_back(new TFT_simple);
