@@ -9,7 +9,7 @@
 
 mixed::mixed(traveler* first_strategy, int mix1, traveler* second_strategy, int mix2, traveler* third_strategy, int mix3)
 {
-	logging = true;
+	logging = false;
 
 	chance1 = mix1;
 	chance2 = mix2;

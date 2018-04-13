@@ -5,15 +5,15 @@
 
 TFT_predict::TFT_predict(int strategy)
 {
-	logging = true;
+	logging = false;
 	first = true;
 	
 	my_bid = 0;
 
 	a = b = c = d = e = false;
 
-	name = "TFT - ";
-	short_name = "";
+	name = "Tit For Tat - ";
+	short_name = "TFT ";
 
 	switch(strategy)
 	{
@@ -49,6 +49,7 @@ TFT_predict::TFT_predict(bool no_log)
 {
 	first = true;
 	name = "TFT - Predict";
+	short_name = "TFT Predict";
 
 	my_bid = 0;
 }

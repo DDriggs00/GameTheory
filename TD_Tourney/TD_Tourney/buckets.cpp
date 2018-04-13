@@ -6,34 +6,45 @@
 buckets::buckets(int method_in, double retention_rate, boolean one_under)
 {
 	method = method_in;
-	logging = true;
+	logging = false;
 	play_one_under = one_under;
 
-	if(play_one_under)
-		name = "Under ";
-	else
-		name = "";
+	if (play_one_under) {
+		name = "Under Buckets - ";
+		short_name = "U-Bucket ";
+	}
+	else {
+		name = "Buckets ";
+		short_name = "Bucket ";
+	}
 	
 	switch(method)
 	{
 	case 0:
-		name += "Buckets - (Fullest, Highest)";
+		name += "(Fullest, Highest)";
+		short_name += "(Full,High)";
 		break;
 	case 1:
-		name += "Buckets - (Fullest, Lowest)";
+		name += "(Fullest, Lowest)";
+		short_name += "(Full,Low)";
 		break;
 	case 2:
-		name += "Buckets - (Fullest, Random)";
+		name += "(Fullest, Random)";
+		short_name += "(Full,Rand)";
 		break;
 	case 3:
-		name += "Buckets - (Fullest, Newest)";
+		name += "(Fullest, Newest)";
+		short_name += "(Full,New)";
 		break;
 	default:
-		if(retention_rate == 0)
-			name += "Buckets - PD, no age bias";
+		if (retention_rate == 0) {
+			name += "PD, no age bias";
+			short_name += "PD, no age bias";
+		}
 		else
 		{
 			name += "Buckets - PD, Retention = ";
+			short_name += "PD, R=";
 
 			char temp[32];	// buffer to hold string below
 			int dummy = (int)retention_rate;
@@ -41,10 +52,12 @@ buckets::buckets(int method_in, double retention_rate, boolean one_under)
 			
 			_itoa_s (dummy, temp, 10);	// change the retention_rate value to a string
 			name.append(temp);
+			short_name.append(temp);
 
 			temp_rate-=dummy;
 
 			name.append(".");
+			short_name.append(".");
 			temp_rate*=10;
 			dummy = (int)temp_rate;
 			
@@ -52,6 +65,7 @@ buckets::buckets(int method_in, double retention_rate, boolean one_under)
 			{
 				_itoa_s (dummy, temp, 10);	// change the retention_rate value to a string
 				name.append(temp);
+				short_name.append(temp);
 
 				temp_rate-=dummy;
 
@@ -78,6 +92,7 @@ buckets::buckets(int method_in, double retention_rate, boolean one_under)
 buckets::buckets(void)
 {
 	name = "Buckets Unitialized";
+	short_name = "Bucket Blank";
 }
 
 

@@ -5,7 +5,7 @@ TFT_simple::TFT_simple(int offset_val)
 {
 	first = true;
 	offset = offset_val;
-	logging = true;
+	logging = false;
 
 	name = "TFT - Simple (y";
 	short_name = "TFT (y";

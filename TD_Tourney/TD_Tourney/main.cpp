@@ -2,9 +2,6 @@
 #include <conio.h>  // For _gethch
 #include <time.h>	// For timing analysis
 
-#include <string>
-#include <cstdlib>
-
 #include <fstream> // For file logging
 #include <direct.h> // to create folders
 #include <math.h>
@@ -15,13 +12,13 @@
 
 using namespace std;
 
-const int MAX_BID = 100;		//default 100
-const int GRANULARITY = 1;		//default 1
-const int BONUS_MALUS = 2;		//default 2
-const int MIN_BID = BONUS_MALUS;//default 2
+const int GRANULARITY = 5;
+const int BONUS_MALUS = 25;
+const int MIN_BID = BONUS_MALUS;
+const int MAX_BID = 100;
 
-const int MATCHES = 10;		//default 100
-const int ROUNDS = 100;		//default 1000
+const int MATCHES = 100;
+const int ROUNDS = 100;
 
 ofstream error;
 ofstream longnames;
@@ -83,7 +80,7 @@ void setParamString()
 {
 	params = "(";
 
-	char temp[4];	// buffer to hold "always" string below
+	char temp[8];	// buffer to hold "always" string below
 
 	_itoa_s (MIN_BID, temp, 10);	// change the value to a string
 	params.append(temp);

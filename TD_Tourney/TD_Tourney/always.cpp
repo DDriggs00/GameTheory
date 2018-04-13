@@ -4,7 +4,7 @@
 
 always::always(int x)
 {
-	logging = true;
+	logging = false;
 	always_num = max(min(x, MAX_BID), MIN_BID);
 	char temp[4];	// buffer to hold "always" string below
 

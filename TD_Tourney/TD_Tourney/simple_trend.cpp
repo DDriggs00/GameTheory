@@ -5,7 +5,7 @@ simple_trend::simple_trend(int k_in, double eps_in)
 {
 	k = k_in;
 	eps = eps_in;
-	logging = true;
+	logging = false;
 
 	index_sum = 0;
 	index_squared_sum = 0;	
@@ -24,21 +24,26 @@ simple_trend::simple_trend(int k_in, double eps_in)
 	char temp[32];	// buffer to hold k string below
 
 	name = "Simple Trend - K = ";
+	short_name = "STrend K=";
 	
 	_itoa_s (k_in, temp, 10);	// change the k value to a string
 	name.append(temp);
+	short_name.append(temp);
 
 	name.append(", Eps = ");
+	short_name.append(",Eps=");
 
 	int dummy = (int)eps;
 	double temp_eps = eps;
 	
 	_itoa_s (dummy, temp, 10);	// change the epsilon value to a string
 	name.append(temp);
+	short_name.append(temp);
 
 	temp_eps-=dummy;
 
 	name.append(".");
+	short_name.append(".");
 	temp_eps*=10;
 	dummy = (int)temp_eps;
 	
@@ -46,6 +51,7 @@ simple_trend::simple_trend(int k_in, double eps_in)
 	{
 		_itoa_s (dummy, temp, 10);	// change the epsilon value to a string
 		name.append(temp);
+		short_name.append(temp);
 
 		temp_eps-=dummy;
 
@@ -58,6 +64,7 @@ simple_trend::simple_trend(int k_in, double eps_in)
 simple_trend::simple_trend(void)
 {
 	name = "Simple Unitialized";
+	short_name = "ST Unitialized";
 }
 
 simple_trend::~simple_trend(void)

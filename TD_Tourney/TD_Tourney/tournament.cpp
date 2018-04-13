@@ -61,9 +61,14 @@ tournament::tournament()
 	
 	string filename = "logs/";
 
-	filename.append("Tournament Results.txt");
-	log.open(filename.c_str());
+	filename.append("results ");
+	filename.append(params);
+	filename.append(".txt");
 
+	log.open(filename.c_str());
+	log.precision(6);
+	log.setf(ios::fixed,ios::floatfield);   // floatfield set to fixed
+	
 	filename = "logs/";
 
 	filename.append("results ");
@@ -71,7 +76,6 @@ tournament::tournament()
 	filename.append(".tex");
 
 	TeXlog.open(filename.c_str());
-
 	TeXlog.precision(6);
 	TeXlog.setf(ios::fixed,ios::floatfield);   // floatfield set to fixed
 
@@ -243,19 +247,19 @@ void tournament::addCompetitors()
 	
 	competitors.push_back(new random);
 	competitors.push_back(new random(MAX_BID - GRANULARITY, MAX_BID));
-	competitors.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // regret minimization range
+	competitors.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // Risk minimization range
 	twins.push_back(new random);
 	twins.push_back(new random(MAX_BID - GRANULARITY, MAX_BID));
-	twins.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // regret minimization range
+	twins.push_back(new random(MAX_BID  - 2*BONUS_MALUS, MAX_BID));  // Risk minimization range
 	
 	competitors.push_back(new always(MIN_BID));
 	competitors.push_back(new always(MAX_BID - GRANULARITY));
 	competitors.push_back(new always(MAX_BID));
-	competitors.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Regret minimization as per Halpern
+	competitors.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Risk minimization as per Halpern
 	twins.push_back(new always(MIN_BID));
 	twins.push_back(new always(MAX_BID - GRANULARITY));
 	twins.push_back(new always(MAX_BID));
-	twins.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Regret minimization as per Halpern
+	twins.push_back(new always(MAX_BID - 2*BONUS_MALUS + GRANULARITY));  // Risk minimization as per Halpern
 
 	competitors.push_back(new TFT_simple);
 	twins.push_back(new TFT_simple);
@@ -270,6 +274,7 @@ void tournament::addCompetitors()
 	competitors.push_back(new mixed(new TFT_predict(E), 80, new always(MAX_BID), 10, new always(MIN_BID), 10));
 	twins.push_back(new mixed(new TFT_predict(E), 80, new always(MAX_BID), 20));
 	twins.push_back(new mixed(new TFT_predict(E), 80, new always(MAX_BID), 10, new always(MIN_BID), 10));
+
 
 	competitors.push_back(new mixed(new TFT_simple, 80, new random(MAX_BID-GRANULARITY,MAX_BID), 20));
 	twins.push_back(new mixed(new TFT_simple, 80, new random(MAX_BID-GRANULARITY,MAX_BID), 20));
@@ -303,9 +308,9 @@ void tournament::addCompetitors()
 	twins.push_back(new buckets(PD, 0.2, false));
 
 	competitors.push_back(new Zeuthen(POS));
-	competitors.push_back(new Zeuthen(NEG));
 	twins.push_back(new Zeuthen(POS));
-	twins.push_back(new Zeuthen(NEG));
+	//competitors.push_back(new Zeuthen(NEG));
+	//twins.push_back(new Zeuthen(NEG));
 
 	competitors.push_back(new simple_trend(3, 0.5));
 	competitors.push_back(new simple_trend(10, 0.5));
@@ -314,12 +319,12 @@ void tournament::addCompetitors()
 	twins.push_back(new simple_trend(10, 0.5));
 	twins.push_back(new simple_trend(25, 0.5));
 
-	competitors.push_back(new simple_trend_new(3, 0.5));
-	competitors.push_back(new simple_trend_new(10, 0.5));
-	competitors.push_back(new simple_trend_new(25, 0.5));
-	twins.push_back(new simple_trend_new(3, 0.5));
-	twins.push_back(new simple_trend_new(10, 0.5));
-	twins.push_back(new simple_trend_new(25, 0.5));
+	// competitors.push_back(new simple_trend_new(3, 0.5));
+	// competitors.push_back(new simple_trend_new(10, 0.5));
+	// competitors.push_back(new simple_trend_new(25, 0.5));
+	// twins.push_back(new simple_trend_new(3, 0.5));
+	// twins.push_back(new simple_trend_new(10, 0.5));
+	// twins.push_back(new simple_trend_new(25, 0.5));
 
 	competitors.push_back(new simple_trend_tweak(3, 0.5));
 	competitors.push_back(new simple_trend_tweak(10, 0.5));
@@ -341,6 +346,36 @@ void tournament::addCompetitors()
 	twins.push_back(new qlearning(0.8, 0.9));
 	twins.push_back(new qlearning(0.5, 0.9));
 	twins.push_back(new qlearning(0.2, 0.9));
+
+	//below here = new
+	competitors.push_back(new qlearning(0.8, 0.2));
+	competitors.push_back(new qlearning(0.5, 0.2));
+	competitors.push_back(new qlearning(0.2, 0.2));
+	twins.push_back(new qlearning(0.8, 0.2));
+	twins.push_back(new qlearning(0.5, 0.2));
+	twins.push_back(new qlearning(0.2, 0.2));
+
+	competitors.push_back(new mixed(new TFT_predict(E), 50, new always(MAX_BID), 50));
+	twins.push_back(new mixed(new TFT_predict(E), 50, new always(MAX_BID), 50));
+
+	competitors.push_back(new mixed(new Zeuthen(POS), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new Zeuthen(POS), 80, new always(MAX_BID), 20));
+
+	//80% stage 2 regret minimization, 20% always max
+	competitors.push_back(new mixed(new always(MAX_BID - 2 * BONUS_MALUS + GRANULARITY), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new always(MAX_BID - 2 * BONUS_MALUS + GRANULARITY), 80, new always(MAX_BID), 20));
+
+	competitors.push_back(new mixed(new simple_trend(3, 0.5), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new simple_trend(3, 0.5), 80, new always(MAX_BID), 20));
+
+	competitors.push_back(new mixed(new simple_trend(25, 0.5), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new simple_trend(25, 0.5), 80, new always(MAX_BID), 20));
+
+	competitors.push_back(new mixed(new simple_trend_tweak(3, 0.5), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new simple_trend_tweak(3, 0.5), 80, new always(MAX_BID), 20));
+	
+	competitors.push_back(new mixed(new simple_trend_tweak(25, 0.5), 80, new always(MAX_BID), 20));
+	twins.push_back(new mixed(new simple_trend_tweak(25, 0.5), 80, new always(MAX_BID), 20));
 
 
 	for(unsigned int x=0; x<twins.size(); x++)

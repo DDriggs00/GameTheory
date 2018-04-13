@@ -3,7 +3,7 @@
 
 Zeuthen::Zeuthen(bool be_positive)
 {
-	logging = true;
+	logging = false;
 	first = true;
 	positive = be_positive;
 	
@@ -13,10 +13,14 @@ Zeuthen::Zeuthen(bool be_positive)
 	my_risk = 0;
 	opp_risk = 0;
 
-	if(positive)
+	if (positive) {
 		name = "Zeuthen Strategy - Positive";
-	else
+		short_name = "Zeuthen(+)";
+	}
+	else {
 		name = "Zeuthen Strategy - Negative";
+		short_name = "Zeuthen(-)";
+	}
 }
 
 Zeuthen::~Zeuthen(void)

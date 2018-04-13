@@ -1,42 +1,48 @@
-L(y-g) E(x-g) H(x-g)
+TFT L(y-g) E(x-g) H(x-g)
+U-Bucket PD, R=0.2
+U-Bucket (Full,New)
+TFT (y-5)
+U-Bucket (Full,Rand)
+U-Bucket (Full,Low)
+U-Bucket PD, R=0.5
+U-Bucket (Full,High)
+U-Bucket PD, R=0.8
+Bucket PD, R=0.2
+Bucket PD, R=0.5
+QL alpha=0.2, d= 00
+QL alpha=0.5, d= 00
+QL alpha=0.2, d= 02
+QL alpha=0.2, d= 09
+QL alpha=0.5, d= 09
+QL alpha=0.8, d= 00
+QL alpha=0.5, d= 02
+QL alpha=0.8, d= 09
+QL alpha=0.8, d= 02
+Bucket (Full,Rand)
+Bucket (Full,High)
+Bucket PD, R=0.8
+STrend K=3,Eps=0.5
+STrend K=10,Eps=0.5
+Gnrc Trvlr
+Gnrc Trvlr
+STrend Tweak K=3,Eps=0.5
 Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
+95
+STrend K=25,Eps=0.5
+R[95, 100]
+STrend Tweak K=10,Eps=0.5
 Gnrc Trvlr
+Zeuthen(+)
 Gnrc Trvlr
-97
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-TFT (y-1)
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-R[96, 100]
-99
-Gnrc Trvlr
-Gnrc Trvlr
-R[99, 100]
 100
+STrend Tweak K=25,Eps=0.5
 Gnrc Trvlr
 Gnrc Trvlr
 Gnrc Trvlr
+55
+25
+R[50, 100]
 Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-2
-Gnrc Trvlr
-Gnrc Trvlr
-R[2, 100]
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
-Gnrc Trvlr
+R[25, 100]

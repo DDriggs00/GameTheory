@@ -4,7 +4,7 @@
 
 qlearning::qlearning(double learning_rate, double discount) : history_size(5), q_init(50.5)
 {
-	logging = true;
+	logging = false;
 	
 	// Set up sizes. (s1 X s2 X s3 X s4 X s5 X a)
 	Q.resize(COMP_TYPE_SIZE);
@@ -37,16 +37,19 @@ qlearning::qlearning(double learning_rate, double discount) : history_size(5), q
 	char temp[32];	// buffer to hold k string below
 
 	name = "Q Learn - alpha= ";
+	short_name = "QL alpha=";
 	
 	int dummy = (int)learning_rate;
 	double temp_double = learning_rate;
 	
 	_itoa_s (dummy, temp, 10);	// change the learning rate value to a string
 	name.append(temp);
+	short_name.append(temp);
 
 	temp_double-=dummy;
 
 	name.append(".");
+	short_name.append(".");
 	temp_double*=10;
 	dummy = (int)temp_double;
 	
@@ -54,6 +57,7 @@ qlearning::qlearning(double learning_rate, double discount) : history_size(5), q
 	{
 		_itoa_s (dummy, temp, 10);	// change the learning value to a string
 		name.append(temp);
+		short_name.append(temp);
 
 		temp_double-=dummy;
 
@@ -63,12 +67,14 @@ qlearning::qlearning(double learning_rate, double discount) : history_size(5), q
 	while(temp_double!=0);
 
 	name.append(", discount= ");
+	short_name.append(", d= ");
 
 	dummy = (int)discount;
 	temp_double = discount;
 	
 	_itoa_s (dummy, temp, 10);	// change the epsilon value to a string
 	name.append(temp);
+	short_name.append(temp);
 
 	temp_double-=dummy;
 
@@ -80,6 +86,7 @@ qlearning::qlearning(double learning_rate, double discount) : history_size(5), q
 	{
 		_itoa_s (dummy, temp, 10);	// change the epsilon value to a string
 		name.append(temp);
+		short_name.append(temp);
 
 		temp_double-=dummy;
 
@@ -92,6 +99,7 @@ qlearning::qlearning(double learning_rate, double discount) : history_size(5), q
 qlearning::qlearning(void) : history_size(5), q_init(50.5)
 {
 	name = "Q-Learning Uninitialized";
+	short_name = "QL Uninitialized";
 }
 
 

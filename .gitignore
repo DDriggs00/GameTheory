@@ -33,3 +33,6 @@
 
 TD_Tourney/TD_Tourney/logs/
 TD_Tourney/TD_Tourney/Debug/
+TD_Tourney/debug
+TD_Tourney/ipch
+TD_Tourney/.vs

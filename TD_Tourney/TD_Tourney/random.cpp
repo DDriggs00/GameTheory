@@ -6,7 +6,7 @@ random::random(int first_val, int last_val)
 {
 	name = "Random [";
 	short_name = "R[";
-	logging = true;
+	logging = false;
 
 
 	first = first_val;
