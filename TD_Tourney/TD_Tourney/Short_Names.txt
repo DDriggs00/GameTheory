@@ -9,15 +9,15 @@ U-Bucket (Full,High)
 U-Bucket PD, R=0.8
 Bucket PD, R=0.2
 Bucket PD, R=0.5
-QL alpha=0.2, d= 00
+QL alpha=0.8, d= 00
 QL alpha=0.5, d= 00
 QL alpha=0.2, d= 02
-QL alpha=0.2, d= 09
 QL alpha=0.5, d= 09
-QL alpha=0.8, d= 00
-QL alpha=0.5, d= 02
-QL alpha=0.8, d= 09
 QL alpha=0.8, d= 02
+QL alpha=0.2, d= 09
+QL alpha=0.2, d= 00
+QL alpha=0.8, d= 09
+QL alpha=0.5, d= 02
 Bucket (Full,Rand)
 Bucket (Full,High)
 Bucket PD, R=0.8
