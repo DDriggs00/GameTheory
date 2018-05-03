@@ -1,0 +1,218 @@
+Traveler's Dilemma Tournament with 48 competitors.
+
+Each competitor plays each other competitor and its twin 100 times.
+Each match played for 100 rounds.
+
+Bids are in the interval [10, 100].
+Granularity: 1
+Bonus/Malus: 10
+
+
+Ranking based on U1
+
+0.830117:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 20%)}
+0.821656:	Simple Trend - K = 3, Eps = 0.5
+0.821494:	Mixed - {STrend K=3,Eps=0.5, 80%); (100, 20%)}
+0.818264:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 50%); (100, 50%)}
+0.809048:	Random [99, 100]
+0.803920:	Mixed - {STrend Tweak K=3,Eps=0.5, 80%); (100, 20%)}
+0.798513:	Simple Trend Tweak - K = 3, Eps = 0.5
+0.796912:	Always 99
+0.789564:	Mixed - {TFT (y-1), 80%); (R[99, 100], 20%)}
+0.785333:	Always 100
+0.785186:	Mixed - {Zeuthen(+), 80%); (100, 20%)}
+0.784898:	Simple Trend - K = 10, Eps = 0.5
+0.783240:	Zeuthen Strategy - Positive
+0.770905:	Simple Trend Tweak - K = 10, Eps = 0.5
+0.767111:	Random [80, 100]
+0.732712:	Mixed - {STrend K=25,Eps=0.5, 80%); (100, 20%)}
+0.728183:	Mixed - {STrend Tweak K=25,Eps=0.5, 80%); (100, 20%)}
+0.713315:	Mixed - {81, 80%); (100, 20%)}
+0.710723:	Mixed - {TFT L(x) E(x) H(y-g), 80%); (100, 20%)}
+0.710546:	Tit For Tat - Low(y-g) Equal(x-g) High(x-g)
+0.707919:	Simple Trend Tweak - K = 25, Eps = 0.5
+0.699315:	Simple Trend - K = 25, Eps = 0.5
+0.693655:	Under Buckets - (Fullest, Highest)
+0.687368:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 10%); (10, 10%)}
+0.672313:	Always 81
+0.672250:	Buckets (Fullest, Highest)
+0.625728:	Under Buckets - Buckets - PD, Retention = 0.5
+0.622282:	Under Buckets - Buckets - PD, Retention = 0.2
+0.615955:	Under Buckets - Buckets - PD, Retention = 0.8
+0.614866:	Buckets Buckets - PD, Retention = 0.5
+0.614374:	Q Learn - alpha= 0.2, discount= 0.2
+0.613668:	Buckets Buckets - PD, Retention = 0.2
+0.609993:	Q Learn - alpha= 0.8, discount= 0.2
+0.609911:	Q Learn - alpha= 0.5, discount= 0.0
+0.609731:	Q Learn - alpha= 0.5, discount= 0.2
+0.609335:	Q Learn - alpha= 0.8, discount= 0.9
+0.608114:	Under Buckets - (Fullest, Random)
+0.607761:	Q Learn - alpha= 0.2, discount= 0.0
+0.607662:	Q Learn - alpha= 0.2, discount= 0.9
+0.607490:	Q Learn - alpha= 0.5, discount= 0.9
+0.607000:	Q Learn - alpha= 0.8, discount= 0.0
+0.602020:	Buckets Buckets - PD, Retention = 0.8
+0.599882:	Under Buckets - (Fullest, Newest)
+0.595928:	TFT - Simple (y-1)
+0.595280:	Buckets (Fullest, Random)
+0.526307:	Under Buckets - (Fullest, Lowest)
+0.435319:	Random [10, 100]
+0.123067:	Always 10
+
+
+Ranking based on U2 for 4800 matches. (48 opponents, 100 matches each)
+
+0.988542:	Always 10
+0.935833:	TFT - Simple (y-1)
+0.913125:	Under Buckets - Buckets - PD, Retention = 0.2
+0.863854:	Under Buckets - Buckets - PD, Retention = 0.5
+0.860938:	Mixed - {TFT L(x) E(x) H(y-g), 80%); (100, 20%)}
+0.848229:	Under Buckets - Buckets - PD, Retention = 0.8
+0.815729:	Mixed - {TFT (y-1), 80%); (R[99, 100], 20%)}
+0.810833:	Tit For Tat - Low(y-g) Equal(x-g) High(x-g)
+0.788542:	Simple Trend - K = 25, Eps = 0.5
+0.753542:	Under Buckets - (Fullest, Lowest)
+0.727500:	Under Buckets - (Fullest, Newest)
+0.715833:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 10%); (10, 10%)}
+0.711042:	Random [10, 100]
+0.672604:	Under Buckets - (Fullest, Random)
+0.614688:	Under Buckets - (Fullest, Highest)
+0.609792:	Simple Trend - K = 3, Eps = 0.5
+0.600000:	Simple Trend - K = 10, Eps = 0.5
+0.597500:	Mixed - {STrend K=25,Eps=0.5, 80%); (100, 20%)}
+0.537917:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 20%)}
+0.514479:	Random [80, 100]
+0.510833:	Simple Trend Tweak - K = 25, Eps = 0.5
+0.499167:	Mixed - {STrend K=3,Eps=0.5, 80%); (100, 20%)}
+0.499167:	Mixed - {81, 80%); (100, 20%)}
+0.446771:	Q Learn - alpha= 0.5, discount= 0.9
+0.446667:	Q Learn - alpha= 0.2, discount= 0.0
+0.446562:	Q Learn - alpha= 0.2, discount= 0.2
+0.446562:	Q Learn - alpha= 0.8, discount= 0.0
+0.446354:	Q Learn - alpha= 0.8, discount= 0.2
+0.443542:	Q Learn - alpha= 0.5, discount= 0.2
+0.440417:	Q Learn - alpha= 0.2, discount= 0.9
+0.439479:	Q Learn - alpha= 0.5, discount= 0.0
+0.437812:	Q Learn - alpha= 0.8, discount= 0.9
+0.429688:	Mixed - {STrend Tweak K=25,Eps=0.5, 80%); (100, 20%)}
+0.404271:	Buckets Buckets - PD, Retention = 0.8
+0.355104:	Buckets Buckets - PD, Retention = 0.2
+0.346979:	Buckets Buckets - PD, Retention = 0.5
+0.320417:	Buckets (Fullest, Random)
+0.301354:	Always 81
+0.238438:	Simple Trend Tweak - K = 10, Eps = 0.5
+0.236458:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 50%); (100, 50%)}
+0.203229:	Simple Trend Tweak - K = 3, Eps = 0.5
+0.202500:	Buckets (Fullest, Highest)
+0.175417:	Always 99
+0.156771:	Random [99, 100]
+0.145729:	Mixed - {STrend Tweak K=3,Eps=0.5, 80%); (100, 20%)}
+0.047187:	Mixed - {Zeuthen(+), 80%); (100, 20%)}
+0.042500:	Zeuthen Strategy - Positive
+0.010937:	Always 100
+
+
+Ranking based on U3
+
+0.909428:	Tit For Tat - Low(y-g) Equal(x-g) High(x-g)
+0.907580:	Under Buckets - Buckets - PD, Retention = 0.2
+0.898805:	Under Buckets - Buckets - PD, Retention = 0.5
+0.893921:	Simple Trend - K = 3, Eps = 0.5
+0.887734:	Mixed - {TFT (y-1), 80%); (R[99, 100], 20%)}
+0.884689:	TFT - Simple (y-1)
+0.881476:	Under Buckets - (Fullest, Newest)
+0.877276:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 20%)}
+0.875956:	Simple Trend - K = 10, Eps = 0.5
+0.874200:	Under Buckets - (Fullest, Highest)
+0.874190:	Mixed - {STrend K=3,Eps=0.5, 80%); (100, 20%)}
+0.868987:	Under Buckets - (Fullest, Random)
+0.865667:	Under Buckets - Buckets - PD, Retention = 0.8
+0.855302:	Under Buckets - (Fullest, Lowest)
+0.854842:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 50%); (100, 50%)}
+0.854367:	Mixed - {TFT L(x) E(x) H(y-g), 80%); (100, 20%)}
+0.848772:	Mixed - {STrend Tweak K=3,Eps=0.5, 80%); (100, 20%)}
+0.846771:	Simple Trend Tweak - K = 3, Eps = 0.5
+0.844108:	Random [80, 100]
+0.843369:	Random [99, 100]
+0.834361:	Always 99
+0.833420:	Simple Trend - K = 25, Eps = 0.5
+0.832768:	Simple Trend Tweak - K = 10, Eps = 0.5
+0.830657:	Buckets Buckets - PD, Retention = 0.2
+0.827294:	Buckets (Fullest, Highest)
+0.826949:	Buckets Buckets - PD, Retention = 0.5
+0.819997:	Mixed - {81, 80%); (100, 20%)}
+0.817895:	Mixed - {Zeuthen(+), 80%); (100, 20%)}
+0.817583:	Always 100
+0.817329:	Zeuthen Strategy - Positive
+0.809196:	Buckets Buckets - PD, Retention = 0.8
+0.805156:	Mixed - {STrend K=25,Eps=0.5, 80%); (100, 20%)}
+0.802781:	Simple Trend Tweak - K = 25, Eps = 0.5
+0.802726:	Buckets (Fullest, Random)
+0.795364:	Always 81
+0.795209:	Q Learn - alpha= 0.2, discount= 0.2
+0.795183:	Mixed - {STrend Tweak K=25,Eps=0.5, 80%); (100, 20%)}
+0.793474:	Q Learn - alpha= 0.8, discount= 0.2
+0.792083:	Q Learn - alpha= 0.5, discount= 0.9
+0.791712:	Q Learn - alpha= 0.5, discount= 0.2
+0.791596:	Q Learn - alpha= 0.8, discount= 0.9
+0.791422:	Q Learn - alpha= 0.2, discount= 0.0
+0.791410:	Q Learn - alpha= 0.5, discount= 0.0
+0.790298:	Q Learn - alpha= 0.8, discount= 0.0
+0.790056:	Q Learn - alpha= 0.2, discount= 0.9
+0.789723:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 10%); (10, 10%)}
+0.739340:	Always 10
+0.576001:	Random [10, 100]
+
+
+Ranking based on U3'
+
+0.955016:	Tit For Tat - Low(y-g) Equal(x-g) High(x-g)
+0.950050:	Under Buckets - Buckets - PD, Retention = 0.2
+0.948920:	Under Buckets - (Fullest, Random)
+0.948719:	Under Buckets - (Fullest, Newest)
+0.948200:	Under Buckets - (Fullest, Highest)
+0.946517:	Buckets Buckets - PD, Retention = 0.2
+0.945834:	Under Buckets - Buckets - PD, Retention = 0.5
+0.943925:	Buckets (Fullest, Random)
+0.943268:	Buckets Buckets - PD, Retention = 0.5
+0.942315:	Buckets (Fullest, Highest)
+0.934405:	TFT - Simple (y-1)
+0.934291:	Under Buckets - (Fullest, Lowest)
+0.933890:	Q Learn - alpha= 0.5, discount= 0.9
+0.933485:	Q Learn - alpha= 0.5, discount= 0.2
+0.933343:	Q Learn - alpha= 0.8, discount= 0.2
+0.933065:	Q Learn - alpha= 0.8, discount= 0.0
+0.932794:	Q Learn - alpha= 0.2, discount= 0.0
+0.932645:	Q Learn - alpha= 0.8, discount= 0.9
+0.932559:	Q Learn - alpha= 0.2, discount= 0.2
+0.932230:	Q Learn - alpha= 0.2, discount= 0.9
+0.932004:	Q Learn - alpha= 0.5, discount= 0.0
+0.931239:	Simple Trend - K = 3, Eps = 0.5
+0.929395:	Mixed - {STrend K=3,Eps=0.5, 80%); (100, 20%)}
+0.925507:	Mixed - {STrend Tweak K=3,Eps=0.5, 80%); (100, 20%)}
+0.925032:	Under Buckets - Buckets - PD, Retention = 0.8
+0.923013:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 20%)}
+0.922555:	Buckets Buckets - PD, Retention = 0.8
+0.922277:	Simple Trend Tweak - K = 3, Eps = 0.5
+0.921061:	Always 99
+0.920649:	Random [99, 100]
+0.919520:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 50%); (100, 50%)}
+0.918083:	Zeuthen Strategy - Positive
+0.917810:	Mixed - {Zeuthen(+), 80%); (100, 20%)}
+0.917360:	Simple Trend - K = 10, Eps = 0.5
+0.917288:	Always 100
+0.916986:	Mixed - {TFT (y-1), 80%); (R[99, 100], 20%)}
+0.908396:	Simple Trend Tweak - K = 10, Eps = 0.5
+0.904121:	Always 81
+0.891077:	Mixed - {TFT L(x) E(x) H(y-g), 80%); (100, 20%)}
+0.875687:	Random [80, 100]
+0.873332:	Simple Trend - K = 25, Eps = 0.5
+0.870203:	Mixed - {81, 80%); (100, 20%)}
+0.861068:	Simple Trend Tweak - K = 25, Eps = 0.5
+0.847307:	Mixed - {STrend K=25,Eps=0.5, 80%); (100, 20%)}
+0.844909:	Mixed - {STrend Tweak K=25,Eps=0.5, 80%); (100, 20%)}
+0.811614:	Mixed - {TFT L(y-g) E(x-g) H(x-g), 80%); (100, 10%); (10, 10%)}
+0.712315:	Always 10
+0.611789:	Random [10, 100]
+
+
